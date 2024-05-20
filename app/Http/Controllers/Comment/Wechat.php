@@ -11,6 +11,6 @@ class Wechat extends Controller
 {
     public function demo(request $request)
     {
-
+        //注释
     }
 }
