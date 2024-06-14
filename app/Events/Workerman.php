@@ -111,60 +111,7 @@ class Workerman
      */
     public static function onMessage(string $clientId,  $messageJson)
     {
-        //用户鉴权成功开始处理逻辑
 
-//
-//        $message = json_decode($messageJson,true);
-//        if(empty($message)||empty($message['content'])){
-//            self::log('发送消息过来的时候1',$messageJson);
-//            self::sendMessage(500, '信息不能为空');
-//            self::log('解析后的json',$message['content']);
-//            return;
-//        }
-//        $key = 'sk-lQr3DANrnjr039IRIEE6pzIzs3tEWcer0GHe9QtdL1koWtew';
-//
-//        $json = [
-//            'model'=>'moonshot-v1-8k',
-//            'messages'=>[
-//                ['role'=>'user','content'=>$message['content']]
-//            ],
-//            'temperature'=>0.3
-//        ];
-//
-//        $client = OpenAI::factory()
-//            ->withApiKey($key)
-//            ->withBaseUri('api.moonshot.cn/v1') // default: api.openai.com/v1
-//            ->withHttpClient($client = new \GuzzleHttp\Client([])) // default: HTTP client found using PSR-18 HTTP Client Discovery
-//            ->withHttpHeader('Content-Type', 'application/json')
-//            ->withHttpHeader('Authorization', 'Bearer '.$key)
-//            ->withStreamHandler(fn (RequestInterface $request): ResponseInterface => $client->send($request, [
-//                'stream' => true // Allows to provide a custom stream handler for the http client.
-//            ]))
-//            ->make();
-//
-//
-//        $result = $client->chat()->createStreamed($json);
-//       // $data = $result->getIterator()->current();
-//        //self::log('打印流id',$client->threads()->messages());
-//        self::sendMessage(200, 'ok',['Status'=>'Start']);
-//        foreach ( $result->getIterator() as $k=>$item){
-//            self::sendMessage(200, 'ok',['content'=>$item->choices[0]->delta->content,'Status'=>'Replying']);
-//        }
-//        self::sendMessage(200, 'ok',['Status'=>'End']);
-//        if (empty($message['type'])) {
-//            self::sendMessage(500, '请配置type');
-//            return;
-//        }
-//        switch ($message['type']) {
-//            case 'chat':
-//
-//                break;
-//            case 'ping':
-//                self::sendMessage(200, 'ok');
-//                break;
-//            default:
-//                self::sendMessage(500, '消息类型不支持');
-//        }
     }
 
 
